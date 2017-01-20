@@ -1,0 +1,196 @@
+@COLOR_BLUE_1: rgba(0, 93, 255, 0.36);
+@COLOR_GREY_1: grey;
+@COLOR_BLACK: black;
+@COLOR_BG: #aaa;
+
+body {
+	background-color: @COLOR_BG;
+	color: @COLOR_BLACK;
+	font-size: 10px;
+	padding: 0;
+    margin: 0;
+}
+
+
+.page {
+
+	&-container {
+
+		display: block;
+		width: 90%;
+		height: 100%;
+		margin: 0 5%;
+		position: relative;
+	}
+
+	&-column {
+
+		width: 25%;
+		margin: 0 4%;
+		display: inline-block;
+		height: 100%;
+		max-height: 100vh;
+		background-color: @COLOR_BLUE_1;
+		vertical-align: top;
+		overflow: auto;
+		min-width: 12rem;
+
+		&::-webkit-scrollbar {
+		    width: 1em;
+		}
+		 
+		&::-webkit-scrollbar-track {
+		    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		}
+		 
+		&::-webkit-scrollbar-thumb {
+		    background-color: rgba(97, 97, 97, 0.56);
+		  	outline: 1px solid slategrey;
+		}
+
+		&.short {
+			height: 10rem;
+		}
+
+		&.grey {
+			background-color: @COLOR_GREY_1;
+		}
+
+		&-head {
+
+			width: 100%;
+			height: 5rem;
+			padding: 1rem 0;
+    		box-sizing: border-box;
+    		font-size: 1.3rem;
+
+			&-sort {
+				display: inline-block;
+				width: 45%;
+				font-size: 1.4rem;
+				&-btn {
+					display: inline-block;
+					width: 1rem;
+					height: 1rem;
+					border-radius: 50%;
+					background-color: red;
+					cursor: pointer;
+					&.on {
+						border: 2px solid yellow;
+					}
+				}
+			}
+
+			&-filter {
+				display: inline-block;
+				width: 45%;
+				font-size: 1.2rem;
+				&-input {
+					border:0;
+					width: 100%;
+    				height: 1.6rem;
+    				outline: none;
+    				&:focus, &:active {
+    					outline: none;
+    				}
+				}
+			}
+
+		}
+
+		&-body {
+
+			text-align: center;
+
+		}
+
+		&-item {
+			position: relative;
+			width: 80%;
+		    height: 3rem;
+		    margin: 0.4rem 0;
+		    display: inline-block;
+		    background: #b4efb4;
+		    text-align: center;
+		    font-size: 1.1rem;
+    		line-height: 2.8rem;
+		    min-width: 10rem;
+		    cursor: pointer;
+
+		    &.selected {
+		    	border: 2px solid;
+		    }
+
+		    &-icons {
+		    	position: absolute;
+		    	right: 0;
+		    	top:0;
+		    	width: 30%;
+		    	height: 100%;
+		    	max-height: 100%;
+		    	line-height: 1rem;
+		    }
+
+		    &-icon {
+		    	width: 1rem;
+		    	height: 1rem;
+		    	display: inline-block;
+		    	margin: 0.2rem;
+		    	vertical-align: middle;
+
+		    	&.btn {
+		    		cursor: pointer;
+
+		    		&.on {
+		    			border: 2px solid;
+		    		}
+		    	}
+
+		    	&.flower {
+		    		background-color: #ff6700;
+		    	}
+
+		    	&.heart {
+		    		background-color: red;
+		    	}
+
+		    	&.sun {
+		    		background-color: yellow;
+		    	}
+
+		    	&.flash {
+		    		background-color: #f366f7;
+		    	}
+		    }
+		}
+
+		&-info {
+
+			padding: 0.5rem 1rem;
+			font-size: 1.3rem;
+			font-family: Tahoma;
+
+			&-head {
+				width: 100%;
+				text-align: center;
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+
+			&-name {
+				margin-left: 1rem;
+			}
+
+			&-flags {	
+				margin-left: 1rem;
+				&-icon {
+					display: inline-block;
+
+				}
+			}
+		}
+
+	}
+
+
+}
